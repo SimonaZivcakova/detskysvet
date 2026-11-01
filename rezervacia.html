@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervácia oslavy | Detský svet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/logo.png" alt="logo" id="logo-obr">
+        <span id="logo">Detský svet</span>
+    </div>
+
+    <nav>
+        <a href="index.html">O nás</a>
+        <a href="menu.html">Menu</a>
+        <a href="otvaraciehodiny.html">Otváracie hodiny</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="galeria.html">Galéria</a>
+    </nav>
+
+    <a href="rezervacia.html" class="rezervacia">Rezervácia</a>
+</header>
+
+<main class="rezervacia-main">
+
+    <h1>Rezervácia detskej oslavy</h1>
+
+    <p class="uvod">
+        Chcete u nás osláviť narodeniny svojho dieťaťa?
+        Vyplňte rezervačný formulár a my sa Vám ozveme
+        s potvrdením dostupnosti termínu a cenovou ponukou.
+    </p>
+
+    <form action="https://formsubmit.co/detskysvet@email.com"
+          method="POST"
+          class="rezervacia-form">
+
+        <input type="hidden" name="_subject"
+               value="Nová rezervácia detskej oslavy">
+
+        <input type="hidden" name="_template"
+               value="table">
+
+        <!-- Ochrana proti spamu -->
+        <input type="text" name="_honey"
+               style="display:none">
+
+        <h2>Kontaktné údaje</h2>
+
+        <label for="meno">Meno a priezvisko *</label>
+        <input type="text" id="meno" name="Meno a priezvisko"
+               placeholder="Vaše meno" required>
+
+        <label for="email">E-mail *</label>
+        <input type="email" id="email" name="E-mail"
+               placeholder="vas@email.sk" required>
+
+        <label for="telefon">Telefónne číslo *</label>
+        <input type="tel" id="telefon" name="Telefón"
+               placeholder="+421..." required>
+
+        <h2>Informácie o oslave</h2>
+
+        <label for="datum">Požadovaný dátum oslavy *</label>
+        <input type="date" id="datum" name="Dátum oslavy"
+               required>
+
+        <label for="cas">Preferovaný čas oslavy *</label>
+        <input type="time" id="cas" name="Čas oslavy"
+               required>
+
+        <label for="deti">Počet detí *</label>
+        <input type="number" id="deti" name="Počet detí"
+               min="1" max="50" placeholder="Napr. 10" required>
+
+        <label for="dospeli">Počet dospelých</label>
+        <input type="number" id="dospeli" name="Počet dospelých"
+               min="0" max="50" placeholder="Napr. 8">
+
+        <label for="vek">Vek oslavujúceho dieťaťa</label>
+        <input type="number" id="vek" name="Vek dieťaťa"
+               min="1" max="18" placeholder="Napr. 5">
+
+        <label for="poznamka">Ďalšie požiadavky alebo poznámky</label>
+        <textarea id="poznamka" name="Poznámka"
+                  rows="5"
+                  placeholder="Napr. predstava o oslave, torta, výzdoba..."></textarea>
+
+        <label class="suhlas">
+            <input type="checkbox" name="Súhlas so spracovaním údajov"
+                   value="Áno" required>
+            Súhlasím so spracovaním osobných údajov
+            na účely vybavenia rezervačnej žiadosti.
+        </label>
+
+        <button type="submit" class="odoslat">
+            Odoslať žiadosť o rezerváciu
+        </button>
+
+        <p class="upozornenie">
+            Odoslaním formulára ešte nie je rezervácia potvrdená.
+            Termín Vám potvrdíme e-mailom alebo telefonicky.
+        </p>
+
+    </form>
+
+</main>
+
+<footer>
+    Telefónne číslo: +421 903 111 111 <br>
+    Email: detskysvet@email.com <br>
+    &copy; Simona Kalinowska 2026
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
